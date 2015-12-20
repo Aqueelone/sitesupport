@@ -13,4 +13,4 @@
 /tmp
 
 #Ignore Gemfile cache
- /Gemfile.lock
+Gemfile.lock

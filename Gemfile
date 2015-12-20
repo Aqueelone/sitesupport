@@ -18,6 +18,7 @@ gem 'compass-rails',  '2.0.5'
 gem 'sass-rails',     '5.0.4'
 gem 'autoprefixer-rails', '6.0.3'
 gem 'bootstrap-switch-rails', '3.3.3'
+gem 'bootstrap-generators'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -66,6 +67,8 @@ gem 'faraday-cookie_jar', '0.0.6'
 gem 'typhoeus',           '0.8.0'
 # Views
 gem 'haml', '4.0.7'
+gem 'haml-rails'
+gem 'haml-contrib'
 # Mail
 gem 'markerb',             '1.1.0'
 gem 'messagebus_ruby_api', '1.0.3'

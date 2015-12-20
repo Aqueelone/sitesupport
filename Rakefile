@@ -10,7 +10,3 @@ HamlLint::RakeTask.new do |t|
   t.files = ['app/views', 'custom/*.haml']
   t.quiet = true # Don't display output from haml-lint to STDOUT
 end
-
-RuboCop::RakeTask.new do |t|
-  t.requires << 'rubocop-rspec'
-end

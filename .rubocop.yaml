@@ -1,3 +1,0 @@
-inherit_from: .rubocop-todo.yaml
-
-require: rubocop-rspec
