@@ -1,11 +1,33 @@
 AllCops:
   RunRailsCops: true
+  Include:
+    - 'app/models/*.rb'
+    - 'app/controllers/*.rb'
+    - 'app/viewa/*.rb'
+    - 'spec/**/*.rb'
+    - 'test/**/*'
+    - 'features/**/*'
   Exclude:
-    - 'db/schema.rb'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
 
+Documentation:
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
+
+StringLiterals:
+   AutoCorrect: true
+
+Style/RegexpLiteral:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
 # Commonly used screens these days easily fit more than 80 characters.
 Metrics/LineLength:
-  Max: 120
+  Max: 140
 
 # Too short methods lead to extraction of single-use methods, which can make
 # the code easier to read (by naming things), but can also clutter the class
