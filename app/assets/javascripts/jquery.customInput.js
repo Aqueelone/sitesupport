@@ -7,7 +7,7 @@
  * --------------------------------------------------------------------
  */
 jQuery.fn.customInput = function(){
-	return $(this).each(function(){	
+	return $(this).each(function(){
 		if($(this).is('[type=checkbox],[type=radio]')){
 			var input = $(this);
 			

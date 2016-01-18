@@ -2,6 +2,22 @@ jQuery(document).ready ->
   $ = jQuery
   screenRes = $(window).width()
   screenHeight = $(window).height()
+  
+  $.lookForCheck
+  
+  # Turn customInputCheckBox
+  if $('input#user_remember_me').is(':checked') 
+     $('label.turnedable').addClass('checked') 
+  else  
+     $('label.turnedable').removeClass('checked checkedHover checkedFocus')  
+  
+  $('label.turnedable').click (event) ->
+    event.preventDefault()
+    chk = !$('input#user_remember_me').is(':checked')
+    $('input#user_remember_me').click()
+    $('label.turnedable').toggleClass('checked')
+    return
+   
   # Smooth Scroling of ID anchors
 
   filterPath = (string) ->

@@ -5010,10 +5010,10 @@ a.thumbnail {
 }
 
 .alert {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
+  padding: 10px;
+  margin: -60px 0px 0px 280px;
   border-radius: 4px;
+  width: 400px;
   h4 {
     margin-top: 0;
     color: inherit;
@@ -5042,9 +5042,10 @@ a.thumbnail {
 }
 
 .alert-success {
-  color: #468847;
+  color: rgb(1, 95, 2);
   background-color: #dff0d8;
-  border-color: #d6e9c6;
+  border: rgb(1, 95, 2) solid 2px;
+  text-shadow: 0px 0px 0px #000;
   hr {
     border-top-color: #c9e2b3;
   }
