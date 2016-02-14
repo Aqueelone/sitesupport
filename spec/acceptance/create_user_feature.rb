@@ -10,18 +10,17 @@ feature 'Create a user', '
   include EmailSpec::Helpers
   include EmailSpec::Matchers
 
-  scenario 'Changing Waiting for Customer status', js: true do
+  scenario 'Changing Waiting for Customer status' do
     visit '/'
     click_link 'Sign Up'
-    within('#session') do
-      fill_in 'login', with: 'OneAdmin'
-      fill_in 'password', with: 'adminPassword'
-      fill_in 'confirm_password', with: 'adminPassword'
-      fill_in 'email', with: 'user@example.com'
+    within('#new_user') do
+      fill_in 'Password', with: 'adminPassword'
+      fill_in 'Password confirmation', with: 'adminPassword'
+      fill_in 'Email', with: 'user@example.com'
     end
-    click_button 'OK'
-    expect(page).to have_content 'Success'
-    UserMailer.should_receive(:deliver_ticket).with('email@example.com', 'OneAdmin')
-    expect(page).to have_link 'Logoff'
+    click_button 'Sign up'
+    expect(page).to have_content 'successfully'
+    print ActionMailer::Base.deliveries
+    expect(ActionMailer::Base.deliveries.size)
   end
 end

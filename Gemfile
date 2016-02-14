@@ -71,7 +71,6 @@ gem 'haml-rails'
 gem 'haml-contrib'
 # Mail
 gem 'markerb',             '1.1.0'
-gem 'messagebus_ruby_api', '1.0.3'
 # Parsing
 gem 'nokogiri',          '1.6.6.4'
 gem 'redcarpet',         '3.3.3'
@@ -127,11 +126,9 @@ group :test do
   gem 'rspec-instafail',   '0.4.0', require: false
   gem 'test_after_commit', '0.4.1'
   # Cucumber (integration tests)
-  gem 'cucumber-rails', '1.4.2'
   gem 'capybara', '2.5.0'
   gem 'database_cleaner', '1.5.1'
   gem 'selenium-webdriver', '2.47.1'
-  gem "chromedriver-helper"
   # General helpers
   gem 'factory_girl_rails', '4.5.0'
   gem 'timecop',            '0.8.0'
@@ -142,6 +139,8 @@ end
 group :development, :test do
   # RSpec (unit tests, some integration tests)
   gem 'rspec-rails', '3.3.3'
+  # Cucumber (integration tests)
+  gem 'cucumber-rails', '1.4.2'
   # Jasmine (client side application tests (JS))
   gem 'jasmine',                   '2.3.1'
   gem 'jasmine-jquery-rails',      '2.0.3'
