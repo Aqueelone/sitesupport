@@ -29,7 +29,7 @@ feature 'Admin edit a ticket', "
     expect(page).to have_content 'Success'
   end
 
-  scenario 'Changing Waiting for Customer status', js: true do
+  scenario 'Changing Waiting for Customer status' do
     visit '/ticket'
     page.find('li', reference: 'ABC-123456').click_link('Edit')
     within('#session') do
@@ -42,7 +42,7 @@ feature 'Admin edit a ticket', "
     click_link 'logoff'
   end
 
-  scenario 'Changing On Hold status', js: true do
+  scenario 'Changing On Hold status' do
     visit '/ticket'
     page.find('li', reference: 'ABC-123456').click_link('Edit')
     within('#session') do
@@ -55,7 +55,7 @@ feature 'Admin edit a ticket', "
     click_link 'logoff'
   end
 
-  scenario 'Changing Cancelled status', js: true do
+  scenario 'Changing Cancelled status' do
     visit '/ticket'
     page.find('li', reference: 'ABC-123456').click_link('Edit')
     within('#session') do
@@ -68,7 +68,7 @@ feature 'Admin edit a ticket', "
     click_link 'logoff'
   end
 
-  scenario 'Changing Completed status', js: true do
+  scenario 'Changing Completed status' do
     visit '/ticket'
     page.find('li', reference: 'ABC-123456').click_link('Edit')
     within('#session') do

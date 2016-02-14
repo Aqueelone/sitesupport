@@ -15,7 +15,7 @@ feature 'User creates a ticket', '
                  confirm_password: 'adminPassword')
   end
 
-  scenario 'Create ticket with  correct credentials', js: true do
+  scenario 'Create ticket with  correct credentials' do
     visit '/ticket/new'
     within('#session') do
       fill_in 'Name', with: 'Jimmy Bean'
@@ -36,7 +36,7 @@ feature 'User creates a ticket', '
     expect(page).to have_content 'user@example.com'
   end
 
-  scenario 'Create ticket with  not correct credentials', js: true do
+  scenario 'Create ticket with  not correct credentials' do
     visit '/ticket/new'
     within('#session') do
       fill_in 'Name', with: 'Jimmy Bean'
