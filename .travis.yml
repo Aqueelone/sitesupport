@@ -19,6 +19,11 @@ branches:
     - 'master'
     - 'develop'
 
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres  
 before_install: gem install bundler
 bundler_args: "--deployment --without development production --with postgresql --jobs 3 --retry 3"
 
