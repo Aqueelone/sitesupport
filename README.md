@@ -5,4 +5,4 @@ This is very simple support system for small a site...
 
 more questions: irc://irc.freenode.org:6667#sitesupportDev
 
-DEMO on Amazon WS EC2 http://52.28.215.71:3000/
+DEMO on Amazon WS EC2 http://52.29.207.123:3000/
