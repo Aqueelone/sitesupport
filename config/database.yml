@@ -7,14 +7,9 @@ development:
   password: su
   host: localhost
 
-test: &TEST
+test:
   adapter: postgresql
-  database: sitesupportTest
-  encoding: unicode
-  pool: 16
-  username: su
-  password: su
-  host: localhost
+  database: travis_ci_test
 
 production:
   adapter: postgresql
